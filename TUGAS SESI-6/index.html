@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>MODE</title>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <a href="#">HOME</a>
+            <a onclick="ALLMODE()" id="mode">MODE-DARK</a>
+            <a onclick="beraniMode()" id="modeBerani">MODE-BERANI</a>
+            <a onclick="jombloMode()" id="modeJomblo">MODE-JOMBLO</a>
+            <a onclick="yMode()" id="modeY">MODE-YUN</a>
+        </nav>
+        <h1 id="h1container">HAI</h1>
+        <p id="info"></p>
+        <img src="" alt="" id="gambar1">
+
+
+    </div>
+
+    <script>
+        function ALLMODE() {
+            let body = document.body;
+            let info = document.getElementById('info')
+            let mode = document.getElementById('mode')
+            let img = document.getElementById('gambar1')
+
+
+            if (body.classList.contains('angry')) {
+                alert('matiin dlu cok kontol')
+                return;
+            }
+            if (body.classList.contains('jomblo')) {
+                alert('matiin dlu cok kontol')
+                return;
+            }
+
+            if (body.classList.contains('yuan')) {
+                alert('matiin dlu cok kontol')
+                return;
+            }
+
+            if (body.classList.toggle('dark')) {
+                mode.textContent = 'MODE-LIGHT';
+                img.src = 'sp.jpg';
+                img.style.display = 'block';
+
+            } else {
+                mode.textContent = 'MODE-DARK';
+                img.style.display = 'none';
+            }
+
+
+        }
+
+        function beraniMode() {
+            let body = document.body;
+            let modeB = document.getElementById('modeBerani')
+
+            if (body.classList.contains('dark')) {
+                alert('matiin dlu cok kontol')
+                return;
+            }
+            if (body.classList.contains('jomblo')) {
+                alert('matiin dlu cok kontol')
+                return;
+            }
+
+            if (body.classList.contains('yuan')) {
+                alert('matiin dlu cok kontol')
+                return;
+            }
+
+            if (body.classList.toggle('angry')) {
+                modeB.textContent = 'MODE-LIGHT';
+            } else {
+                modeB.textContent = 'MODE-BERANI';
+                body.className = '';
+            }
+        }
+
+        function jombloMode() {
+            let body = document.body;
+            let modeJ = document.getElementById('modeJomblo')
+
+
+            if (body.classList.contains('dark')) {
+                alert('matiin dlu cok kontol')
+                return;
+            }
+            if (body.classList.contains('angry')) {
+                alert('matiin dlu cok kontol')
+                return;
+            }
+
+            if (body.classList.contains('yuan')) {
+                alert('matiin dlu cok kontol')
+                return;
+            }
+
+            if (body.classList.toggle('jomblo')) {
+                modeJ.textContent = 'MODE-LIGHT';
+            } else {
+                modeJ.textContent = 'MODE-JOMBLO';
+            }
+
+        }
+
+        function yMode() {
+            let body = document.body;
+            let modeY = document.getElementById('modeY')
+            let info = document.getElementById('info')
+            let H1 =document.getElementById('h1container')
+
+            if (body.classList.contains('dark')) {
+                alert('matiin dlu cok kontol')
+                return;
+            }
+            if (body.classList.contains('angry')) {
+                alert('matiin dlu cok kontol')
+                return;
+            }
+
+            if (body.classList.contains('jomblo')) {
+                alert('matiin dlu cok kontol')
+                return;
+            }
+
+            if (body.classList.toggle('yuan')){
+                modeY.textContent = 'MODE-LIGHT';
+                H1.textContent='';
+            info.textContent = 'kritik buat yuan adalah sumpah kamu cantik banget, aku bahkan agak bingung harus mulai dari mana buat ngejelasin rasa kagum ini. awalnya cuma lihat sekilas aja, tapi entah kenapa langsung kepikiran, kok bisa ya ada orang secantik ini. bukan cuma cantik biasa yang sekilas dilihat lalu lewat begitu saja, tapi cantik yang bikin orang berhenti sebentar, benar-benar memperhatikan, dan tanpa sadar jadi mikir lama. rasanya kayak ada sesuatu yang beda, sesuatu yang susah dijelaskan tapi jelas terasa. jujur saja, waktu pertama kali melihatmu rasanya seperti menemukan sesuatu yang jarang sekali ada. bukan cuma soal wajah atau penampilan, tapi ada aura yang membuat semuanya terasa lebih menarik. seperti ada perpaduan yang pas antara keindahan, kelembutan, dan sesuatu yang bikin hati langsung kagum. sampai sempat kepikiran, ini beneran nyata atau cuma perasaan karena terlalu takjub. kadang ada orang yang cantik, tapi setelah dilihat beberapa saat rasanya biasa saja. tapi yang ini berbeda. semakin diperhatikan, semakin terasa kalau kecantikannya seperti punya banyak detail yang bikin orang makin kagum. dari cara ekspresi, dari kesan yang muncul, semuanya terasa pas seperti sebuah karya yang benar-benar indah. sampai rasanya sulit untuk tidak memikirkan betapa luar biasanya itu. aku bahkan sempat berpikir, kok bisa ya seseorang terlihat seindah ini. seperti ada keseimbangan yang sempurna antara semua hal yang membuat seseorang terlihat menarik. bukan hanya sekadar cantik di permukaan, tapi ada sesuatu yang membuatnya terasa lebih dari itu. sesuatu yang membuat orang melihatnya lalu langsung merasa kagum tanpa perlu alasan panjang. yang paling aneh adalah rasa kagum itu malah semakin bertambah ketika dipikirkan lagi. biasanya kan rasa kagum muncul sebentar lalu hilang, tapi yang ini justru sebaliknya. semakin dipikirkan, semakin terasa kalau kecantikan itu benar-benar menonjol. seperti ada kesan yang tertinggal di pikiran dan membuat orang terus teringat. rasanya seperti melihat sesuatu yang jarang sekali ditemui. seperti menemukan pemandangan yang sangat indah secara tiba-tiba, sampai membuat orang berhenti sejenak hanya untuk benar-benar menikmati momen itu.'
+}else{
+    modeY.textContent='MODE-YUN';
+     H1.textContent='HAI';
+    info.textContent='';
+}
+
+        }
+
+    </script>
+</body>
+
+</html>
